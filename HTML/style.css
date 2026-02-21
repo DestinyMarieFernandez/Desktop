@@ -11,7 +11,7 @@ nav {
  justify-content: space-between;
  align-items: center;
  padding: 0 16px;
- background-color:#ee52bf;
+ background-color:#f34189b7;
  }
 
 header {
@@ -24,17 +24,17 @@ justify-content: center;
  }
 
  h1 {
-font-size: 72px;
+font-size: 100px;
  }
 
 .subheader {
-    font-size: 36px;
+    font-size: 30px;
     margin: 16px 0 24px 0;
 
 }
 
 button {
-    background-color: #f0f6;
+    background-color: rgba(158, 4, 102, 0.737);
     color: white;
     border: none;
     padding: 8px 16px;
@@ -71,6 +71,13 @@ align-items: center;
 justify-content: center;
  }
 
+
+#about,
+#discord,
+#contact {
+ padding: 48px 0;
+}
+
  /*
 
  ABOUT
@@ -79,7 +86,7 @@ justify-content: center;
 
 #about {
 padding: 48px 0;
-background-color: #fcc5ed;
+background-color:  #ec0c697a;
 display: flex;
 }
 
@@ -89,27 +96,27 @@ h2 {
  margin-bottom: 24px;
 }
 
-section_description {
+.section__description {
  display: flex;   
  justify-content: center;
  align-items: center;
 }
 
-.about_img--wrapper {
- width: 40%;
+.about__img--wrapper {
+  width: 40%;
  padding: 0 24px;   
 }
 
 img {
-width: 100%;
+ width: 100%;
 }
 
-.section_description--wrapper {
+.section__description--wrapper {
  width: 60%;   
  padding: 0 24px;
 }
 
-.section_description--para {
+.section__description--para {
 font-size: 20px;
 line-height: 1.5;
 margin-bottom: 24px;
@@ -122,7 +129,7 @@ DISCORD
 */
 
 #discord {
- background-color: #e9bffb;   
+background-color:  pink;   
 }
 
 /*
@@ -131,7 +138,7 @@ CONTACT
 
 */
 #contact {
-background-color: rgb(164, 164, 235);
+background-color: rgb(240, 27, 130) ;
 }
 
 form {
@@ -140,6 +147,7 @@ max-width: 600px;
 display: flex;
 flex-direction: column;
 margin: 0 auto;
+padding: 0 24px;
 }
 
 input, textarea {
@@ -154,14 +162,14 @@ FOOTER
 
 */
 Footer {
-background-color: #ffc0cb;
+background-color: #f1397d94;
 display: flex;
 flex-direction: column;
 align-items: center;
 }
 .footer_logo {
-max-width: 480px;
-margin-bottom: 16px;
+max-width: 150px;
+margin-bottom: 32px;
 }
 
 .footer_links {
@@ -171,4 +179,71 @@ margin-bottom: 32px;
 
  .footer_link  {
 padding: 0 16px;
+ }
+
+ /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+ @media (max-width: 728px) {
+ .row  {
+ flex-direction: column; 
+}
+
+.home__description {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__description--button {
+max-width: 240px;
+}
+ 
+h1 {
+text-align: center;  
+font-size: 60px;
+}
+
+.subheader {
+  text-align: center;
+  font-size: 28px;
+}
+
+ul {
+display: none;
+}
+
+.section__description {
+  flex-direction: column;
+}
+
+.section__description--wrapper {
+width: 100%;
+}
+
+.about__img--wrapper {
+width: 100%;
+padding: 0;
+}
+
+#discord .section__description {
+flex-direction: column-reverse;
+}
+
+footer {
+padding: 48px 24px;
+}
+
+.footer_logo {
+max-width: 360px; 
+}  
+
+.footer_link {
+padding: 0 4px;
+font-size: 18px;
+}
+
+.footer_links {
+margin-bottom: 24px;
+}
+
  }
